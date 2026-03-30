@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal"); // flechas izquierda/derecha
         float moveZ = Input.GetAxis("Vertical");   // flechas arriba/abajo
 
-        Vector3 movement = new Vector3(moveX, 0f, moveZ).normalized;
+        Vector3 movement = new Vector3(moveX, 0f, moveZ);
 
         transform.Translate(movement * speed * Time.deltaTime);
     }
